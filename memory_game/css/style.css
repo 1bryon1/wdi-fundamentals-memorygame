@@ -20,10 +20,11 @@ img {
   margin-top: 40px;
   margin-right: 8px;
   margin-left: 8px;
+  border-bottom: 2px solid transparent;
 }
 /*Memory Game Title Tag-orange title-*/
 h1 {
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #FFFFFF;
   letter spacing: 1px;
   font-weight: 400;
@@ -52,6 +53,7 @@ nav {
   font-color: #FFFFFF;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-bottom: 2px solid transparent;
 }
 
 a {
@@ -70,3 +72,43 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+/*footer style */
+footer {
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #0D2C40;
+  font-size: 14px;
+  letter-spacing: .08em;
+  font-weight: 500;
+}
+.copyright {
+  font-family: "Raleway", Sans-serif;
+  float: left;
+  font-color: white;
+  border-bottom: 2px solid transparent;
+}
+.message {
+  font-family: "Raleway", Sans-serif;
+  float: right;
+  font-color: white;
+  border-bottom: 2px solid transparent;
+}
+/* clearfix */
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+border-bottom: 2px solid transparent;
+}
+.name {
+  color: #f15B31;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+}
+a:hover {
+  border-color: white
+  }
