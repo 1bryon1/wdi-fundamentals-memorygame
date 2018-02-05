@@ -96,13 +96,13 @@ footer {
 }
 /* clearfix */
 .clearfix:after {
-visibility: hidden;
-display: block;
-content: " ";
-clear: both;
-height: 0;
-font-size: 0;
-border-bottom: 2px solid transparent;
+  visibility: hidden;
+ display: block;
+ content: " ";
+ clear: both;
+ height: 0;
+ font-size: 0;
+ border-bottom: 2px solid transparent;
 }
 .name {
   color: #f15B31;
