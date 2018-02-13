@@ -73,7 +73,7 @@ main {
   margin-right: auto;
 }
 /*footer style */
-footer {
+.footer {
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
@@ -94,6 +94,7 @@ footer {
   font-color: white;
   border-bottom: 2px solid transparent;
 }
+
 /* clearfix */
 .clearfix:after {
   visibility: hidden;
