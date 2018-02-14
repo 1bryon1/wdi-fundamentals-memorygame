@@ -1,64 +1,64 @@
 console.log("Up and Running");
-
-console.log("User flipped a queen");
-console.log("user flipped a king");
-
+//playing Cards
 var cards = [
 {
-  rank: "queen",
-  suit: "hearts",
+  rank: 'queen',
+  suit: 'hearts',
   cardImage: "images/queen-of-hearts.png"
 },
 {
-  rank: "queen",
-  suit: "diamonds",
-  cardImage: "images/queen-of-diamonds.png"
+  rank: 'queen',
+  suit: 'diamonds',
+  cardImage: "images/queen-of-hearts.png"
 },
 {
-  rank: "king",
-  suit: "hearts",
+  rank: 'king',
+  suit: 'hearts',
   cardImage: "images/king-of-hearts.png"
 },
 {
-  rank: "king",
-  suit: "diamonds",
+  rank: 'king',
+  suit:'diamonds',
   cardImage: "images/king-of-diamonds.png"
 }
 ];
-//cardsInPlay array area??
-var cardsInPlay = [];
-var checkForMatch = function () {
-    if (cardsInPlay[0] === cardsInPlay[1]) {
-      console.log("you found a match");
-      alert("YOU FOUND A MATCH");
-      } else {
-      console.log("sorry, try again.");
-      alert("SORRY TRY AGAIN");
-  }
-}
+//cardsInPlay area
+var cardsInPlay =[].push('cardOne' + 'cardTwo');
 
-//flipCard function
+//flipCard (Chap 9)
 var flipCard = function(cardId){
-  var cardId = this.getAttribute('data-id');
-    this.setAttribute('src', cards[cardId].cardImage);
+  this.setAttribute('src',cards[cardId].cardImage);
+  if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
     cardsInPlay.push(cards[cardId].rank);
-  console.log("User flipped" + cards[cardID].rank); + " of " + cards[cardID].suit);
-  console.log(cards[cardId].cardImage);
-  console.log(cards[cardId].suit);
-if (cardsInPlay.length === 2 && cardsInplay[0] === cardsInPlay[1]) {
-  checkForMatch();
+    console.log("user flipped " + cards[cardID].rank)
+    console.log(cards[cardId].cardImage);
+    console.log(cards[cardId].cardSuit);
+}
+//checkForMatch
+var cardsInPlay =[];
+  var checkForMatch = function (){
+  var cardId=this.getAttribute('data-id');
+    if (cardsInPlay[0] ===  cardsInPlay[1]){
+    console.log("you found a match");
+    alert("you found a match");
+    }else{
+    console.log("you found a match");
+    alert("you found a match");
+checkForMatch();
+    var cardId=this.getAttribute('data-id');
+    this.setAttribute('src',cards[cardId].cardImage);
+    console.log(cards[cardId].cardImage);
+    console.log(cards[cardId].suit);
   }
 }
-
-//createBoard FUNCTION section
+//createBoard
 var createBoard = function(){
-  for (var i = 0; i < cards.length; i++) {
-    var cardElement = document.createElement('img');
-    cardElement.setAttribute('src','images/back.png');
-    cardElement.setAttribute('data-id', i);
-    cardElement.addEventListener('click', flipCard);
-    document.getElementById('game-board').appendChild(cardElement);
+for (var i = 0; i < cards.length; i++){
+  var cardElement = document.createElement('img');
+  cardElement.setAttribute('src', "images/back.png");
+  cardElement.setAttribute('data-id, i');
+  cardElement.addEventListener('click', flipCard);
+  document.getElementById('game-board').appendChild(cardElement);
   }
 }
-
-  createBoard();
+createBoard();
