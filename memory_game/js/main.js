@@ -25,25 +25,29 @@ var cards = [
 //cardsInPlay
 var cardsInPlay = [];
 
-//flipCard
-var flipCard = function() {
-  var cardId = this.getAttribute('data-Id');
-  this.setAttribute('src', cards[cardId].cardImage);
-  if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
-    cardsinPLay.push(cards[cardID].rank);
-    console.log("user flipped" + cards[cardID].rank);
-    console.log(cards[cardId].cardImage);
-    console.log(cards[cardId].suit);
-  }
-}
 //checkForMatch
-var checkForMatch = function() {
-    if (cardsInPlay[0] === cardsInPlay[1]) {
-      alert("you found a match");
-    }else{
-      alert("sorry try again");
+var checkForMatch = function () {
+  if (cardsInPlay[0] === cardsInPlay[1]) {
+    console.log("You found a match!");
+    alert("you found a match");
+  } else {
+    console.log("Sorry, try again.");
   }
-}
+};
+
+//flipCard
+var flipCard = function () {
+  cardId = this.getAttribute('data-id');
+  console.log(cardId);
+  cardsInPlay.push(cards[cardId].cards);
+  this.setAttribute('src', cards[cardId].cardImage);
+if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
+//if (cardsInPlay.length === 2) {
+    checkForMatch ();
+//cardsInPlay = [];
+  }
+};
+
 //createBoard
 var createBoard = function() {
   for (var i = 0; i < cards.length; i ++) {
