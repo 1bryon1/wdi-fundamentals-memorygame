@@ -43,7 +43,7 @@ var flipCard = function () {
   cardsInPlay.push(cards[cardId].rank);
   this.setAttribute('src', cards[cardId].cardImage);
   if (cardsInPlay.length === 2) {
-    checkForMatch ();
+    checkForMatch();
     cardsInPlay = [];
   }
 };
