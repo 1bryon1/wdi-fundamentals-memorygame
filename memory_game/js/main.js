@@ -32,6 +32,7 @@ var checkForMatch = function () {
     alert("you found a match");
   } else {
     console.log("Sorry, try again.");
+    alert("Sorry, try again");
   }
 };
 
@@ -39,12 +40,11 @@ var checkForMatch = function () {
 var flipCard = function () {
   cardId = this.getAttribute('data-id');
   console.log(cardId);
-  cardsInPlay.push(cards[cardId].cards);
+  cardsInPlay.push(cards[cardId].rank);
   this.setAttribute('src', cards[cardId].cardImage);
-if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
-//if (cardsInPlay.length === 2) {
+  if (cardsInPlay.length === 2) {
     checkForMatch ();
-//cardsInPlay = [];
+    cardsInPlay = [];
   }
 };
 
